@@ -22,9 +22,15 @@ class CustomDataset(torch.utils.data.Dataset):
             img = cv2.imread(str(images[i]))
             img = cv2.cvtColor(img, cv2.COLOR_RGBA2GRAY)
             img = cv2.resize(img, (width, height))
+            ret, th1 = cv2.threshold(img, 0, 255, cv2.THRESH_BINARY)
+            cv2.imwrite('test.jpg', th1)
             self.labels[i] = images[i].name.split("_")[0]
             self.images[i, :, :] = img
 
+        sample = self.images[0]
+        cv2.imwrite('test.jpg', sample)
+        cv2.imshow("image", sample)
+        cv2.waitKey()
         self.labels = np.array(self.labels)
 
     def __getitem__(self, index):

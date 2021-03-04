@@ -1,3 +1,4 @@
+# The pure version of the CNN model
 import numpy as np
 import os
 import cv2
@@ -19,28 +20,6 @@ data_dir = Path("./dataset")
 images = list(data_dir.glob("*.jpg"))
 print("Number of images found: ", len(images))
 
-# ******************Sample part*****************
-# # Some sample in the data
-# sample_images = images[:4]
-# _, ax = plt.subplots(2, 2, figsize=(5, 3))
-
-# image = cv2.imread(str(sample_images[0]))
-# print("image shape", image.shape)
-
-# for i in range(4):
-#     img = cv2.imread(str(sample_images[i]))
-#     # print("Shape of image: ", img.shape)
-#     ax[i // 2, i % 2].imshow(img)
-#     ax[i // 2, i % 2].axis('off')
-# plt.show()
-# ****************Sample End********************
-
-# **********************TEST PASS***************
-# # Test Function for the data set class
-# FunctionTest.test_dataset_class(images)
-
-# **********************Test END***************
-
 random.shuffle(images)
 print("Dataset size:", len(images))
 # Split the data set
@@ -60,3 +39,6 @@ print("train set size:", len(train_data))
 train_set = CustomDataset(train_data, transform=transforms.ToTensor)
 valid_set = CustomDataset(valid_data, transform=transforms.ToTensor)
 test_set = CustomDataset(test_data, transform=transforms.ToTensor)
+
+# CNN Model
+# Coming soon
