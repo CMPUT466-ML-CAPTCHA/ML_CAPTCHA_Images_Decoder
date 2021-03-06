@@ -6,16 +6,9 @@ import matplotlib.pyplot as plt
 from pathlib import Path
 import random
 from PIL import Image
-import torch
 from CustomDataset import CustomDataset
 from torchvision import transforms
-from torch.utils.data import DataLoader
-from CNN import CNN
-import torch.nn as nn
-
-
-device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
-print(torch.cuda.get_device_name(0))
+import FunctionTest
 
 # Load the data from the Google Drive
 # data_dir = Path("/content/drive/MyDrive/Data")
@@ -43,56 +36,9 @@ print("test set size:", len(test_data))
 print("validation set size:", len(valid_data))
 print("train set size:", len(train_data))
 
-train_set = CustomDataset(train_data, transform=transforms.ToTensor())
-valid_set = CustomDataset(valid_data, transform=transforms.ToTensor())
-test_set = CustomDataset(test_data, transform=transforms.ToTensor())
+train_set = CustomDataset(train_data, transform=transforms.ToTensor)
+valid_set = CustomDataset(valid_data, transform=transforms.ToTensor)
+test_set = CustomDataset(test_data, transform=transforms.ToTensor)
 
-train_dataloader = DataLoader(dataset=train_set, batch_size=100, shuffle=True)
-test_dataloader = DataLoader(dataset=test_set, batch_size=100, shuffle=True)
-valid_dataloader = DataLoader(dataset=valid_set, batch_size=100, shuffle=True)
-
-model = CNN().to(device)
-
-
-def train(model, train_dataloader, valid_dataloader, device):
-    model.train()
-    criterion = nn.MultiLabelSoftMarginLoss()
-    optimizer = torch.optim.Adam(model.parameters(), lr=0.001)
-    for epoch in range(20):
-        model.train()
-        for i, (images, labels) in enumerate(train_dataloader):
-            images = images.to(device)
-            labels = labels.to(device)
-
-            predict = model(images)
-            optimizer.zero_grad()
-            loss = criterion(predict, labels)
-            loss.backward()
-            optimizer.step()
-        if (epoch+1) % 5 == 0:
-            accuracy = valid(model, valid_dataloader, device)
-            print("epoch: {} loss: {:.10f} accuracy: {:.4f}".format(
-                (epoch+1), loss.item(), accuracy))
-
-
-def valid(model, valid_dataloader, device):
-    num_correct = 0  # the counter for the correct items
-    num_total = len(valid_dataloader)*100  # the counter for the total items
-    mean_acc = 0  # the accuracy of the validation
-    model.eval()  # set the evaluation state of the model
-    with torch.no_grad():
-        for _, (images, labels) in enumerate(valid_dataloader):
-            images = images.to(device)
-            labels = labels.to(device)
-            output = model(images)
-            labels = labels.reshape((100, 6, 36))
-            output = output.reshape((100, 6, 36))
-            labels = torch.argmax(labels, dim=2)
-            output = torch.argmax(output, dim=2)
-            num_correct += ((output == labels).sum(dim=1) == 6).sum().item()
-        mean_acc = num_correct / num_total * 100
-        return mean_acc
-
-
-train(model, train_dataloader, valid_dataloader, device)
-# TODO: Test function
+# CNN Model
+# Coming soon
