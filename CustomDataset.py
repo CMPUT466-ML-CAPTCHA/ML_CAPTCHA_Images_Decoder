@@ -48,4 +48,7 @@ def captcha_to_vector(captcha_str):
 
 
 def vector_to_captcha(vector):
-    pass
+    captcha_str = ""
+    for i in vector:
+        captcha_str += TABLE[i]
+    return captcha_str
