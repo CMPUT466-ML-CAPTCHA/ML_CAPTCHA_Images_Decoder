@@ -41,12 +41,12 @@ validDataloader = DataLoader(dataset=validSet, batch_size=BATCH_SIZE, shuffle=Tr
 
 IMAGE_SIZE = trainSet.height * trainSet.width
 model = RNN().to(device)
-criterion = torch.nn.CrossEntropyLoss()
-optimizer = torch.optim.Adam(model.parameters(), lr=0.001)
+criterion = torch.nn.MultiLabelSoftMarginLoss()
+optimizer = torch.optim.Adam(model.parameters(), lr=0.01)
 
 def train(model, trainLoader, validLoader, device):  
     model.train() 
-    for epoch in range(100):
+    for epoch in range(1000):
         model.train()
         for _, (images, labels) in enumerate(trainLoader):
             images = images.to(device, dtype=torch.float32)
