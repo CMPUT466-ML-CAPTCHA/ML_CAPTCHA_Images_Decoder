@@ -40,20 +40,20 @@ testDataloader = DataLoader(dataset=testSet, batch_size=BATCH_SIZE, shuffle=True
 validDataloader = DataLoader(dataset=validSet, batch_size=BATCH_SIZE, shuffle=True)
 
 IMAGE_SIZE = trainSet.height * trainSet.width
-model = RNN(IMAGE_SIZE, BATCH_SIZE, 36*6).to(device)
-criterion = torch.nn.MultiLabelSoftMarginLoss()
+model = RNN().to(device)
+criterion = torch.nn.CrossEntropyLoss()
 optimizer = torch.optim.Adam(model.parameters(), lr=0.001)
 
 def train(model, trainLoader, validLoader, device):  
     model.train() 
-    for epoch in range(20):
+    for epoch in range(100):
         model.train()
         for _, (images, labels) in enumerate(trainLoader):
             images = images.to(device, dtype=torch.float32)
             labels = labels.to(device, dtype=torch.float32)
-
             
-            predict = model(images, None)[0]
+            #predict = model(images, None)[0]
+            predict = model(images)
             optimizer.zero_grad()
             
             loss = criterion(predict, labels)
@@ -74,13 +74,14 @@ def valid(model, validLoader, device):
         for _, (images, labels) in enumerate(validLoader):
             images = images.to(device)
             labels = labels.to(device)
-            output = model(images, None)
+            #output = model(images, None)
+            output = model(images)
             labels = labels.reshape((100, 6, 36))
             output = output.reshape((100, 6, 36))
             labels = torch.argmax(labels, dim=2)
-            output = torch.argmax(output, dim=2)
+            output = torch.argmin(output, dim=2)
             num_correct += ((output == labels).sum(dim=1) == 6).sum().item()
         mean_acc = num_correct / num_total * 100
         return mean_acc
-    
-train(model, trainDataloader, validDataloader, device)
+
+train(model, trainDataloader, testDataloader, device) 
