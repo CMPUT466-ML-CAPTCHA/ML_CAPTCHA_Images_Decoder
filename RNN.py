@@ -42,7 +42,7 @@ class Decoder(nn.Module):
         self.out = nn.Linear(6*128, 6 * 36)
 
     def forward(self, x):
-        # (N,256) -> (N,6,256) -> (N,6,128) -> (N, 6*128) -> (N,6* 36) -> (N,6,36)
+        # (N, 256) -> (N, 6, 256) -> (N, 6, 128) -> (N, 6*128) -> (N, 6* 36) -> (N, 6, 36)
         x = x.reshape(-1, 1, 256) 
         x = x.expand(-1, 6, 256)
         lstm, (h_n, h_c) = self.lstm(x, None)
