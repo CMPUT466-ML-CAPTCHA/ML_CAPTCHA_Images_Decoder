@@ -155,14 +155,15 @@ def group(lst):
     i += 6
   return new_list
 
-for i in range(1, 10):
-    knn = KNeighborsClassifier(n_neighbors = 3)
-    train_x,train_y = get_data(train_dataloader)
+train_x,train_y = get_data(train_dataloader)
+test_x, test_y = get_data(test_dataloader)
+test_y = group(test_y)
+
+for i in range(1, 31):
+    knn = KNeighborsClassifier(n_neighbors = i, weights = "distance")
     knn.fit(train_x, train_y)
-    test_x,test_y = get_data(test_dataloader)
     y_predict = knn.predict(test_x)
-    test_y = group(test_y)
     y_predict = group(y_predict)
 
-    accuracy=metrics.accuracy_score(test_y,y_predict)
+    accuracy=metrics.accuracy_score(test_y, y_predict)
     print("# neighbors = {}, Accuracy: {}%".format(i, accuracy*100))
