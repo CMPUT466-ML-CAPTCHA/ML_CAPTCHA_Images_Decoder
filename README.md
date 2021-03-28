@@ -12,9 +12,9 @@ Our goal is to study and compare the performance of four machine learning algori
 
 For more details, please see the project final report or watch the video below.
 
-- [Project proposal](https://github.com/CMPUT466-ML-CAPTCHA/ML_CAPTCHA_Images_Decoder/blob/main/Project_Proposal.pdf)
-- [Project midterm report](https://github.com/CMPUT466-ML-CAPTCHA/ML_CAPTCHA_Images_Decoder/blob/main/Project_Midterm_Report.pdf)
-- [Project final report](https://github.com/CMPUT466-ML-CAPTCHA/ML_CAPTCHA_Images_Decoder/blob/main/Project_Final_Report.pdf)
+- [Project proposal](https://github.com/CMPUT466-ML-CAPTCHA/ML_CAPTCHA_Images_Decoder/blob/main/Project_reports/Project_Proposal.pdf)
+- [Project midterm report](https://github.com/CMPUT466-ML-CAPTCHA/ML_CAPTCHA_Images_Decoder/blob/main/Project_reports/Project_Midterm_Report.pdf)
+- [Project final report](https://github.com/CMPUT466-ML-CAPTCHA/ML_CAPTCHA_Images_Decoder/blob/main/Project_reports/Project_Final_Report.pdf)
 - [Project video]()
 
 ## Colab Notebook
