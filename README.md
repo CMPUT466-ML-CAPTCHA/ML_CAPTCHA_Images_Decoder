@@ -1,12 +1,12 @@
 # Welcome to CMPUT466 `CAPTCHA` project 😃
 
 
-## Project Introduction
+## Project Introduction: Analytical Study of CAPTCHA Recognition Models
 
 Project for Winter 2021 CMPUT466 (Introduction to Machine Learning) at the University of Alberta taught by Alona Fyshe.
 
-Our goal is to study and compare the performance of four machine learning algorithms predicting *textual* CAPTCHA images, including convolutional neural network (**CNN**), recurrent neural network (**RNN**), support vector machine (**SVM**) and *k*-nearest neighbors algorithm (*k*-**NN**). 
-(CAPTCHA stands for "Completely Automated Public Turing test to tell Computers and Humans Apart")
+Our goal is to study and compare the performance of four machine learning algorithms predicting *textual* CAPTCHA images, including convolutional neural network (**CNN**), recurrent neural network (**RNN**), support vector machine (**SVM**) and *k*-nearest neighbours algorithm (*k*-**NN**). 
+(CAPTCHA is the acronym for "Completely Automated Public Turing test to tell Computers and Humans Apart")
 
 ---
 
