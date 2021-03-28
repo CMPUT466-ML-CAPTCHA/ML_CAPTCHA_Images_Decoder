@@ -12,6 +12,11 @@ The goal is to study and compare the performance of four machine learning algori
 - [Project final report]()
 - [Project video]()
 
+## Colab Notebook
+
+The [NoteBook](https://colab.research.google.com/drive/18vBLiIp1egN65hZOJVZs9w_kMOEZlq1h?usp=sharing) have all the codes in this repository organized in sections
+
+
 ## Data
 
 - `CAPTCHA` dataset: [Link](https://www.kaggle.com/ethan404/captcha6digits)
