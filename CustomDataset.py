@@ -3,12 +3,11 @@ import torch
 import cv2
 import numpy as np
 
-NUMBER = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
-ALPHABET = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L',
-            'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
+NUMBER = ["{}".format(x) for x in range(10)]
+ALPHABET = list(string.ascii_uppercase)
 TABLE = NUMBER+ALPHABET
 
-
+# Custom dataset
 class CustomDataset(torch.utils.data.Dataset):
     def __init__(self, images, transform=None, target_transform=None, height=50, width=200):
         self.transform = transform
@@ -33,7 +32,8 @@ class CustomDataset(torch.utils.data.Dataset):
     def __len__(self):
         return len(self.images)
 
-
+# Convert the CAPTCHA into the (6*36,) vector (6 characters, 10 numbers + 26 uppercase/capital characters)
+# 1 means the CAPTCHA image contains this character in TABLE, 0 means otherwise
 def captcha_to_vector(captcha_str):
     captcha_str = captcha_str.upper()
     vector = np.zeros(36*6, dtype=np.float32)
@@ -46,7 +46,8 @@ def captcha_to_vector(captcha_str):
         vector[i*36+index] = 1.0
     return vector
 
-
+# Convert the vector to the CAPTCHA (the input vector is different from the vector above)
+# Example: input: [1,2,34,2,6,7]; output: "23Y378"
 def vector_to_captcha(vector):
     captcha_str = ""
     for i in vector:
