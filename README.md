@@ -3,10 +3,14 @@
 
 ## Project Introduction: Analytical Study of CAPTCHA Recognition Models
 
-Project for Winter 2021 CMPUT466 (Introduction to Machine Learning) at the University of Alberta taught by Alona Fyshe.
+Project for Winter 2021 [CMPUT466](https://www.ualberta.ca/computing-science/undergraduate-studies/course-directory/courses/introduction-to-machine-learning.html) (Introduction to Machine Learning) at the [University of Alberta](https://cs.ualberta.ca/) taught by [Alona Fyshe](https://webdocs.cs.ualberta.ca/~alona/).
 
-Our goal is to study and compare the performance of four machine learning algorithms predicting *textual* CAPTCHA images, including convolutional neural network (**CNN**), recurrent neural network (**RNN**), support vector machine (**SVM**) and *k*-nearest neighbours algorithm (*k*-**NN**). 
-(CAPTCHA is the acronym for "Completely Automated Public Turing test to tell Computers and Humans Apart")
+Our goal is to study and compare the performance of four machine learning algorithms predicting *textual* CAPTCHA images, including 
+[convolutional neural network](https://en.wikipedia.org/wiki/Convolutional_neural_network) (**CNN**), 
+[recurrent neural network](https://en.wikipedia.org/wiki/Recurrent_neural_network) (**RNN**), 
+[support vector machine](https://en.wikipedia.org/wiki/Support-vector_machine) (**SVM**) and 
+[*k*-nearest neighbours algorithm](https://en.wikipedia.org/wiki/K-nearest_neighbors_algorithm) (*k*-**NN**). 
+([CAPTCHA](https://en.wikipedia.org/wiki/CAPTCHA) is the acronym for "Completely Automated Public Turing test to tell Computers and Humans Apart")
 
 ---
 
@@ -19,7 +23,7 @@ For more details, please see the project final report or watch the video below.
 
 ## Colab Notebook
 
-The [Notebook](https://colab.research.google.com/drive/18vBLiIp1egN65hZOJVZs9w_kMOEZlq1h?usp=sharing) contains all the codes in this GitHub repository organised in sections.
+This [Notebook](https://colab.research.google.com/drive/18vBLiIp1egN65hZOJVZs9w_kMOEZlq1h?usp=sharing) contains all the codes in this GitHub repository organised in sections. In case you do not own a University of Alberta email account, please click [here](https://github.com/CMPUT466-ML-CAPTCHA/ML_CAPTCHA_Images_Decoder/blob/main/ML_CAPTCHA_Images_Decoder.ipynb) to see the notebook.
 
 
 ## Data
