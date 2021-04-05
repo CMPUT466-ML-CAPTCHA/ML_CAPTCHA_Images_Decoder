@@ -109,13 +109,12 @@ if torch.cuda.is_available():
     print(torch.cuda.get_device_name(0))
 
 # Path to the local dataset
-data_dir = pathlib.Path("./dataset")
+data_dir = pathlib.Path("../dataset")
 
 images = list(data_dir.glob("*.jpg")) # dataset as a list
 print("Number of images found:", len(images)) # size of the dataset
 
-train_data = images[:8000]
-test_data = images[8000:]
+train_data, test_data = train_test_split(images, test_size = 0.2, random_state = 6, shuffle = True)
 
 train_set = CustomDataset(train_data, transform=transforms.ToTensor())
 test_set  = CustomDataset(test_data,  transform=transforms.ToTensor())
@@ -150,7 +149,7 @@ def group(lst):
   i = 0
   new_list = []
   while i < n:
-    captcha = lst[i:i+5]
+    captcha = lst[i:i+6]
     new_list.append(''.join(captcha))
     i += 6
   return new_list
@@ -166,4 +165,4 @@ for i in range(1, 31):
     y_predict = group(y_predict)
 
     accuracy=metrics.accuracy_score(test_y, y_predict)
-    print("# neighbors = {}, Accuracy: {}%".format(i, accuracy*100))
+    print("# neighbors = {}, Accuracy: {:.2f}%".format(i, accuracy*100))
