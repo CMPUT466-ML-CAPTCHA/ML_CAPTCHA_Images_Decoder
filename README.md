@@ -21,7 +21,7 @@ For more details, please see the project final report or watch the video below.
 - [Project proposal](https://github.com/CMPUT466-ML-CAPTCHA/ML_CAPTCHA_Images_Decoder/blob/main/Project_reports/Project_Proposal.pdf)
 - [Project midterm report](https://github.com/CMPUT466-ML-CAPTCHA/ML_CAPTCHA_Images_Decoder/blob/main/Project_reports/Project_Midterm_Report.pdf)
 - [Project final report](https://github.com/CMPUT466-ML-CAPTCHA/ML_CAPTCHA_Images_Decoder/blob/main/Project_reports/Project_Final_Report.pdf)
-- [Project video]()
+- [Project video](https://www.youtube.com/watch?v=5UXk3sj2-uo) [Presentation slides](https://github.com/CMPUT466-ML-CAPTCHA/ML_CAPTCHA_Images_Decoder/blob/main/Project_reports/Presentation_Slides.pdf)
 
 ## Colab Notebook
 
