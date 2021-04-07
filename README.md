@@ -1,3 +1,4 @@
+<!---機器學習·驗證碼課題項目-->
 # Welcome to CMPUT466 `CAPTCHA` project 😃
 
 
@@ -16,13 +17,14 @@ and two segmentation-based algorithms,
 
 ---
 
-For more details, please see the project final report or watch the video below.
+For a brief overview, please see the presentation slides below. For more details, please read the project final report or watch the video below.
 
 - [Project proposal](https://github.com/CMPUT466-ML-CAPTCHA/ML_CAPTCHA_Images_Decoder/blob/main/Project_reports/Project_Proposal.pdf)
 - [Project midterm report](https://github.com/CMPUT466-ML-CAPTCHA/ML_CAPTCHA_Images_Decoder/blob/main/Project_reports/Project_Midterm_Report.pdf)
 - [Project final report](https://github.com/CMPUT466-ML-CAPTCHA/ML_CAPTCHA_Images_Decoder/blob/main/Project_reports/Project_Final_Report.pdf)
-- [Project video](https://www.youtube.com/watch?v=0C9iBsmdNj0) [(Presentation slides)](https://github.com/CMPUT466-ML-CAPTCHA/ML_CAPTCHA_Images_Decoder/blob/main/Project_reports/Presentation_Slides.pdf)
+- [Project video](https://www.youtube.com/watch?v=xTxbNTO7doY) and [presentation slides](https://github.com/CMPUT466-ML-CAPTCHA/ML_CAPTCHA_Images_Decoder/blob/main/Project_reports/Presentation_Slides.pdf)
 <!---https://www.youtube.com/watch?v=5UXk3sj2-uo-->
+<!---https://www.youtube.com/watch?v=0C9iBsmdNj0-->
 
 ## Colab Notebook
 
