@@ -27,6 +27,7 @@ For a brief overview, please see the presentation slides or watch the short pres
 <!---https://www.youtube.com/watch?v=0C9iBsmdNj0-->
 
 ## Colaboratory Notebook
+**Use this notebook to run the code if possible, as many of the `.py` files contains duplicate code and maybe out-of-date**
 
 This [notebook](https://colab.research.google.com/drive/18vBLiIp1egN65hZOJVZs9w_kMOEZlq1h?usp=sharing) combines all the code in this GitHub repository organised in sections. In case you do not own a University of Alberta email account, please click [here](https://github.com/CMPUT466-ML-CAPTCHA/ML_CAPTCHA_Images_Decoder/blob/main/ML_CAPTCHA_Images_Decoder.ipynb) to see the notebook.
 
