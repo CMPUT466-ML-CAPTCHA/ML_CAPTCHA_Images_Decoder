@@ -1,4 +1,4 @@
-<!---機器學習·驗證碼識別課題項目-->
+<!---辛丑年冬季學期·機器學習·驗證碼識別課題項目·歡迎光臨-->
 # Welcome to CMPUT466 `CAPTCHA` project 😃
 
 ## Project Introduction: Analytical Study of CAPTCHA Recognition Models
@@ -13,29 +13,30 @@ two segmentation-free algorithms,
 [recurrent neural network](https://en.wikipedia.org/wiki/Recurrent_neural_network) (**RNN**), 
 and two segmentation-based algorithms,
 [support vector machine](https://en.wikipedia.org/wiki/Support-vector_machine) (**SVM**) and 
-[*k*-nearest neighbours algorithm](https://en.wikipedia.org/wiki/K-nearest_neighbors_algorithm) (*k*-**NN**). 
+[*k*-nearest neighbours algorithm](https://en.wikipedia.org/wiki/K-nearest_neighbours_algorithm) (*k*-**NN**). 
 
 ---
 
-For a brief overview, please see the presentation slides or watch the short presentation video below. For more details, please read the project final report.
+For a brief overview, please see the presentation slides or watch the short presentation YouTube video below. 
+
+If you are looking for more details, please read the following project final report.
 
 - [Project proposal](https://github.com/CMPUT466-ML-CAPTCHA/ML_CAPTCHA_Images_Decoder/blob/main/Project_reports/Project_Proposal.pdf)
 - [Project midterm report](https://github.com/CMPUT466-ML-CAPTCHA/ML_CAPTCHA_Images_Decoder/blob/main/Project_reports/Project_Midterm_Report.pdf)
 - [Project final report](https://github.com/CMPUT466-ML-CAPTCHA/ML_CAPTCHA_Images_Decoder/blob/main/Project_reports/Project_Final_Report.pdf)
 - [Project video](https://www.youtube.com/watch?v=xTxbNTO7doY) and [presentation slides](https://github.com/CMPUT466-ML-CAPTCHA/ML_CAPTCHA_Images_Decoder/blob/main/Project_reports/Presentation_Slides.pdf)
-<!---https://www.youtube.com/watch?v=5UXk3sj2-uo-->
-<!---https://www.youtube.com/watch?v=0C9iBsmdNj0-->
 
 ## Colaboratory Notebook
-**Use this notebook to run the code if possible, as many of the `.py` files contains duplicate code and maybe out-of-date**
+
+**Use this notebook to run the code if possible, as many of the `.py` files in the repository contain duplicate code and some of them may be out-of-date.**
 
 This [notebook](https://colab.research.google.com/drive/18vBLiIp1egN65hZOJVZs9w_kMOEZlq1h?usp=sharing) combines all the code in this GitHub repository organised in sections. In case you do not own a University of Alberta email account, please click [here](https://github.com/CMPUT466-ML-CAPTCHA/ML_CAPTCHA_Images_Decoder/blob/main/ML_CAPTCHA_Images_Decoder.ipynb) to see the notebook.
 
 ## Data
 
-- `CAPTCHA` dataset: [Link](https://www.kaggle.com/ethan404/captcha6digits)
+- `CAPTCHA` images dataset: [Link](https://www.kaggle.com/ethan404/captcha6digits)
 
-- `CAPTCHA` generator: [Link](https://github.com/Ethan707/CAPTCHA-Generator)
+- `CAPTCHA` images generator: [Link](https://github.com/Ethan707/CAPTCHA-Generator)
 
 ## Contributors
 
