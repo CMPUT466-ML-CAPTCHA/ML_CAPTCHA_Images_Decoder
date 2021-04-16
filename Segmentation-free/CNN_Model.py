@@ -5,7 +5,7 @@ class CNN(nn.Module):
     def __init__(self):
         super(CNN, self).__init__()
         self.layer1 = nn.Sequential(
-            nn.Conv2d(1, 32, kernel_size=5, padding=2),
+            nn.Conv2d(3, 32, kernel_size=5, padding=2),
             nn.BatchNorm2d(32),
             nn.ReLU(),
             nn.MaxPool2d(2))
@@ -28,14 +28,14 @@ class CNN(nn.Module):
         self.out = nn.Linear(512, 36*6)
 
     def forward(self, x):
-        x = self.layer1(x)  # Input: torch.Size([64, 1, 50, 200])
-        x = self.layer2(x)  # Input: torch.Size([64, 32, 25, 100])
-        x = self.layer3(x)  # Input: torch.Size([64, 48, 12, 50])
-        x = self.layer4(x)  # Input: torch.Size([64, 64, 6, 25])
+        x = self.layer1(x)
+        x = self.layer2(x)
+        x = self.layer3(x)
+        x = self.layer4(x)
 
-        # Output: torch.Size([64, 64, 3, 12])
+        # Output: torch.Size([100, 64, 3, 12])
         x = x.view(-1, 64*3*12)
         x = self.layer5(x)
         output = self.out(x)
-        # Output: torch.Size([64, 36*6])
+        # Output: torch.Size([100, 36*6])
         return output

@@ -1,4 +1,3 @@
-from PIL import Image
 import torch
 import cv2
 import numpy as np
@@ -18,14 +17,10 @@ class CustomDataset(torch.utils.data.Dataset):
         self.height = height
 
     def __getitem__(self, index):
+        # get the image with path
         image = cv2.imread(str(self.images[index]))
-        image = cv2.cvtColor(image, cv2.COLOR_RGBA2GRAY)
-        image = cv2.resize(image, (self.width, self.height))
-        _, image = cv2.threshold(image, 20, 255, cv2.THRESH_BINARY)
-        assert len(self.images[index].name.split("_")[0].upper()) == 6
-        label = captcha_to_vector(
-            self.images[index].name.split("_")[0])
-
+        label = captcha_to_vector(self.images[index].name.split("_")[0])
+        # Apply the transform to the image
         if self.transform is not None:
             image = self.transform(image)
         return image, label

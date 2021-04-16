@@ -139,9 +139,4 @@ with torch.no_grad():
         output = torch.argmax(output, dim=1)
         origin = vector_to_captcha(label)
         predict = vector_to_captcha(output)
-
-        image = image.reshape(50, 200)
-        image = image.cpu()
-        ax[i//5, i % 5].imshow(image)
-        ax[i//5, i % 5].title.set_text("Origin: "+origin+" Predict: "+predict)
-plt.show()
+        print("Origin: "+origin+"   Predict: "+predict)
